@@ -6,14 +6,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private String a="555";
-    aasda
     private String s="111";
     private String a="1123";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        sdsa
-                sdfsdf
     }
 }
