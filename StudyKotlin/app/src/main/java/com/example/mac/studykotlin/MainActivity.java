@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private String a="555";
     aasda
     private String s="111";
     private String a="1123";
