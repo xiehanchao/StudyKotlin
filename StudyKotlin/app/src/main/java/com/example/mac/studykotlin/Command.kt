@@ -5,4 +5,6 @@ package com.example.mac.studykotlin
  */
 public interface Command<T> {
     fun execute(): T
+
+
 }

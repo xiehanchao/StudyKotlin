@@ -9,6 +9,8 @@ import java.util.*
  */
 
 public class ForecastDataMapper {
+
+
 //    fun convertFromDataModel(forecast: DomainClasses.ForecastResult): DomainClasses.ForecastList {
 //        return DomainClasses.ForecastList(forecast.city.name, forecast.city.country, convertForecastItemToDomain(forecast.list))
 //        fun convertForecastListToDomain(list: List<DomainClasses.Forecast>): List<ModelForecast> {

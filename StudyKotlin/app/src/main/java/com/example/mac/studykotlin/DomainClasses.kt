@@ -16,6 +16,8 @@ class DomainClasses {
             //            val temp: String,
 //            val wind_direction: String,
 //            val wind_strength: String,
+
+
 //            val humidity: String,
 //            val time: String
             val sk: mySk,
