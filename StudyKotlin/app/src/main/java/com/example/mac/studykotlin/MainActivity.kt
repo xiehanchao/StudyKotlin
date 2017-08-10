@@ -11,33 +11,24 @@ class MainActivity : AppCompatActivity() {
 
 
 
-qqq
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        var list=ArrayList<String>()
-//        list.add("aaaa")
-//        list.add("bbbb")
-//        list.add("cccc")
-//        list.add("dddd")
-//        list.add("eeee")
-//
-//        val map = list.map { convertForecastItemToDomain(it) }
-//        println("map = ${map.toString()}")
-//    }
-//    fun convertForecastItemToDomain(forecast: String) : List<String>{
-//        val a=ArrayList<String>()
-//        a.add("1")
-//        return a
-//    }
 
         async {
             var requestForecastCommand = RequestForecastCommand("feffc99d76feb8c4c8283f6ec2fadfc8")
             val execute = requestForecastCommand.execute()
-            println(execute)
+            val map = execute.map { convertForecastItemToDomain(it) }
+
+            println(map)
         }
 
     }
+
+     fun convertForecastItemToDomain(it: DomainClasses.Future): DomainClasses.Future{
+            val week=it.week.substring(2,3)
+            return DomainClasses.Future(it.temperature,it.weather,it.wind,week,it.date)
+     }
 }
 
 
