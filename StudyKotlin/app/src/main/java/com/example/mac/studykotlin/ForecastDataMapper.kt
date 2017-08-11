@@ -12,9 +12,8 @@ public class ForecastDataMapper {
 
 
 
-    fun convertFromDataModel(forecast: Result): ArrayList<DomainClasses.Future> {
-        val Future = forecast.result
-        return Future.future
+    fun convertFromDataModel(forecast: DomainClasses.result): DomainClasses.result {
+        return forecast
     }
 
 }
