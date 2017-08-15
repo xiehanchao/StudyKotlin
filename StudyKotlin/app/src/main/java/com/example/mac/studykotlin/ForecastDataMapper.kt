@@ -14,6 +14,8 @@ public class ForecastDataMapper {
 
     fun convertFromDataModel(forecast: DomainClasses.result): DomainClasses.result {
         return forecast
+
+
     }
 
 }

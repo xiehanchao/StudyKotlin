@@ -19,7 +19,9 @@ android {
         }
     }
 
-
+    dataBinding {
+        enabled = true
+    }
 }
 
 
@@ -36,5 +38,6 @@ dependencies {
     compile "org.jetbrains.anko:anko-common:$anko_version"
     compile	"com.android.support:recyclerview-v7:$support_version"
     compile "com.google.code.gson:gson:2.4"
+    compile 'org.jetbrains.anko:anko-sqlite:0.10.0'
 
 }

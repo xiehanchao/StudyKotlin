@@ -1,12 +1,12 @@
 package com.example.mac.studykotlin
 
-import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import android.support.v7.widget.RecyclerView.ViewHolder
 import android.view.LayoutInflater
 import android.widget.TextView
+import kotlinx.android.synthetic.main.layout.view.*
 
 
 /**
@@ -17,6 +17,7 @@ import android.widget.TextView
 class ForecastListAdapter(map: DomainClasses.myResult, val itemClick: ForecastListAdapter.OnItemClickListener) : RecyclerView.Adapter<ForecastListAdapter.MyViewHolder>() {
     public interface OnItemClickListener {
         operator fun invoke(forecast: DomainClasses.Future)
+
     }
 
     var map: DomainClasses.myResult? = null
@@ -26,6 +27,7 @@ class ForecastListAdapter(map: DomainClasses.myResult, val itemClick: ForecastLi
     }
 
     override fun getItemCount(): Int {
+
         return map!!.size()
     }
 
@@ -40,14 +42,11 @@ class ForecastListAdapter(map: DomainClasses.myResult, val itemClick: ForecastLi
     }
 
     class MyViewHolder(view: View,val itemClick: OnItemClickListener) : ViewHolder(view) {
-        var tv: TextView? = null
-
         init {
-            tv = view.findViewById(R.id.temperature) as TextView
         }
 
         fun bindForecast(future: DomainClasses.Future) {
-            tv!!.text=future.temperature
+            itemView.temperature.text=future.temperature
             itemView.setOnClickListener { itemClick(future) }
         }
 

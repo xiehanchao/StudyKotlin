@@ -15,9 +15,10 @@ class DomainClasses {
     data class myResult(
             val sk: mySk,
             val future: ArrayList<Future>
-    ) {
-        operator fun get(position: Int): Future = future[position]
-        fun size(): Int = future.size
+    )
+    {
+        operator fun get(position: Int) = future[position]
+        fun size() = future.size
     }
 
 
